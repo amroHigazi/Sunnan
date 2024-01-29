@@ -1,0 +1,96 @@
+.card {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+ 
+  /* Example of a media query for smaller screens */
+  @media (max-width: 768px) {
+    .card-title {
+      font-size: 1em;
+    }
+    .row {
+  
+        grid-gap: 20px; /* Space between columns */
+      }
+      .green {
+        color: #05532A;
+     
+        font-family: 'AdvertisingExtraBold';
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 800;
+    
+    }
+  }
+
+  .item {
+    display: inline-block;
+    margin-right: 10px; /* Optional, for some space between items */
+    color: gray;
+    
+}
+
+table .tr {
+
+    background: #0000000A;
+ 
+
+
+  
+}
+
+.container{
+    --bs-gutter-x: 5.5rem;
+}
+
+
+
+
+
+.test:after {
+    content: '\2807';
+    display: flex;
+    justify-content: flex-end;
+    font-size: 25px;
+
+    
+  
+
+}
+
+.green {
+    color: #05532A;
+    text-align: right;
+    font-family: 'AdvertisingExtraBold';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+
+}
+
+.black-text {
+    color: 05532A;
+    font-weight: bold;
+
+
+}
+
+h2 {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: right;
+
+}
+.active-link {
+
+  color: black;
+  /* Additional styles for active link */
+}
+
+a{
+  text-decoration: none; /* Removes underline */
+  color: #000;
+
+}

@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'AdvertisingExtraBold-1';
+  src:('./AdvertisingExtraBold-1.ttf') format('truetype');
+
+}
+.card {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+ 
+  /* Example of a media query for smaller screens */
+  @media (max-width: 768px) {
+    .card-title {
+      font-size: 1em;
+    }
+    .row {
+  
+        grid-gap: 20px; /* Space between columns */
+      }
+      .green {
+        color: #05532A;
+     
+        font-family: 'Tajawal, sans-serif-1';
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 800;
+    
+    }
+  }
+
+
+
+table .tr {
+
+    background: #0000000A;
+ 
+
+
+  
+}
+
+.container{
+    --bs-gutter-x: 5.5rem;
+}
+
+
+
+
+.test:after {
+    content: '\2807';
+    display: flex;
+    justify-content: flex-end;
+    font-size: 25px;
+
+    
+  
+
+}
+
+.green {
+    color: #05532A;
+    text-align: right;
+    font-family: 'Tajawal';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 1000;
+
+}
+
+.black-text {
+   
+    font-weight: bold;
+
+
+}
+
+h2 {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: right;
+
+}
+
+
+a{
+  text-decoration: none; /* Removes underline */
+  color: #000;
+
+}

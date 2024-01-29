@@ -1,0 +1,80 @@
+
+<br>
+<br>
+<br>
+<div class="container" dir="rtl">
+  <h2 > لوحة التحكم</h2>
+  <br>
+  <br>
+  <div class="row">
+   
+    <div class="col-md-4"  *ngFor="let Category of Categories">
+   
+      <div class="card" style="width: 19rem;  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      margin: 1%;padding: 3%">
+     
+        <table style="margin: 2%;padding: 10%;">
+          <tbody >
+
+            <tr class="" >
+              <h5 class="card-title green "> {{Category.name}} </h5>
+              <td class="black-text ">
+                <div class="test"></div>
+              </td>
+
+          </tbody>
+        </table>
+        <a routerLink="/hadith-type/list-hadith-type/{{Category.id}}" data-bs-toggle="tooltip"
+        data-bs-placement="top" title="Edit" class="px-2 text-primary">
+        <div class="card-body" style="display: grid;justify-items: center;" >
+          <div style="display: grid;justify-items: center;">
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 100 100" fill="none" style="display: grid; justify-items: center;">
+                <circle cx="50" cy="50" r="45" fill="#E6F3F0" fill-opacity="0.8"/>
+                <image class="img" [attr.xlink:href]="[Category.imageUrl]" x="20" y="20" width="60" height="60" clip-path="url(#circleView)" />
+            </svg>
+          </div>
+          
+  
+        </div>
+        </a>
+
+
+        <table class="tb">
+          <tbody>
+
+            <tr class="tr">
+
+              <td class="black-text" style="text-align: right;"><span class="black-text" style="margin-right: 20px;">عدد
+                  الاقسام</span> </td>
+
+              <td style="text-align: left;" class="green"><span style="margin-left: 20px;">{{Category.sectionsCount}}</span> </td>
+
+
+
+          </tbody>
+        </table>
+        <table style="margin-top: 5px;">
+          <tbody>
+
+            <tr class="tr">
+              <td class="black-text" style="text-align: right;"><span class="black-text" style="margin-right: 20px;">عدد
+                  الفيديوهات </span> </td>
+
+              <td class="green" style="text-align: left;"><span style="margin-left: 20px;">{{Category.videosCount}}</span> </td>
+
+
+          </tbody>
+        </table>
+
+        <div class="card-footer">
+        </div>
+     
+      </div>
+
+
+
+    </div>
+
+  </div>
+</div>

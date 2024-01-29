@@ -1,0 +1,99 @@
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid #000;
+}
+.styled-table thead tr {
+    background-color: #dfe5e4;
+    color: #ffffff;
+    text-align: center;
+}
+::ng-deep .customClass .mat-menu-content {border:1px solid red; background:lightblue}
+::ng-deep .customClass .mat-menu-content .mat-menu-item {color:blue;}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    align-items: center;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+button{
+  background-color:rgba(14, 113, 14, 0.708);
+  color: #fff;
+  border: 1px solid rgba(14, 113, 14, 0.708); 
+
+}
+  button:hover{
+    background-color:rgba(210, 220, 210, 0.708);
+    color: #fff;
+    border: 1px solid rgba(210, 220, 210, 0.708);
+    color:  rgba(14, 113, 14, 0.708); ;
+  
+  }
+  .custom-dialog-container .mat-dialog-container {
+    width: 10%;
+    }
+    h2{
+        font-family: "Tajawal", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: right;
+    }
+    .item {
+        display: inline-block;
+        margin-right: 10px; /* Optional, for some space between items */
+        color: gray;
+        
+    }
+    .active-link {
+
+        color: black;
+        /* Additional styles for active link */
+      }
+
+      .door-selection {
+        text-align: center;
+      }
+      
+      .door {
+        display: inline-block;
+        width: 100px;
+        height: 70px;
+        margin: 10px;
+        border: 1px solid rgba(14, 113, 14, 0.708);
+        border-radius: 5px;
+        background-color:rgba(14, 113, 14, 0.708);
+        padding: 5px;
+        cursor: pointer;
+        color: #fff;
+      }
+      
+      .door p {
+        margin-top: 15px; /* Center text vertically */
+      }
+
+      a{
+        text-decoration: none; /* Removes underline */
+        color: #000;
+
+      }
+     

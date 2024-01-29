@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+
+    }
+  
+    table .tr {
+    background-color:rgb(226, 224, 224);
+    width: 140%;
+  
+    
+   
+    }
+    img{
+        width: 50%;
+        height: 100%;
+     
+       
+        }
+        .test:after {
+            content: '\2807';
+            font-size: 20px;
+            display: flex;
+            justify-self: end;
+           
+            }
+
+            .green{
+                color: green;
+                font-weight: bold;
+
+            }
+           .black-text{
+            color: black;
+            font-weight: bold;
+
+
+           }
+         

@@ -1,0 +1,77 @@
+<br>
+<br>
+<br>
+<div dir="rtl" class="inline-block-container">
+  <div  class="item">
+    <a routerLink="/category/list-category" class="item"> <h2> لوحة التحكم </h2></a>
+   </div>
+  <div class="item"><h2>/</h2>
+  </div>
+<a  class="item"  routerLinkActive="active-link" routerLinkActiveOptions="{exact: true}" class="item active-link"><h2>{{ name }}</h2>
+</a>
+</div>
+<br>
+<div class="container" dir="rtl">
+  <div class="row">
+
+    <div class="col-md-4"  *ngFor="let hadithType of hadithType2">
+    
+   
+      <div class="card" style="width: 19rem;  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      margin: 1%;padding: 3%">
+     
+        <table style="margin: 2%;">
+          <tbody >
+
+            <tr class="" >
+              <h5 class="card-title green "> {{hadithType.name}} </h5>
+              <td class="text-align:center" style="color: #585858;"><span style="font-size: 14px;"></span></td>
+              <td class="black-text " style="text-align: left">
+                <div class="test"></div>
+              </td>
+          </tbody>
+        </table>
+
+        <div class="card-body" style="display: grid;justify-items: center;" >
+          <a routerLink="/hadith/list-hadith/{{hadithType.id}}" data-bs-toggle="tooltip"
+          data-bs-placement="top" title="Edit" class="px-2 text-primary"><i
+              class="bx bx-pencil font-size-18"></i>
+
+        
+             <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 100 100" fill="none" style="display: grid; justify-items: center;">
+              <circle cx="50" cy="50" r="45" fill="#E6F3F0" fill-opacity="0.8"/>
+              <image class="img" [attr.xlink:href]="[hadithType.imageUrl]" x="20" y="20" width="60" height="60" clip-path="url(#circleView)" />
+          </svg>
+
+          
+</a>
+        </div>
+
+
+        <table style="margin-top: 5px;">
+          <tbody>
+
+            <tr class="tr">
+             
+              <td class="black-text" style="text-align: right;"><span class="black-text" style="margin-right: 20px;">عدد
+                  الفيديوهات </span> </td>
+
+              <td class="green" style="text-align: left;"><span style="margin-left: 20px;">{{hadithType.videosCount}}</span> </td>
+
+          
+
+          </tbody>
+        </table>
+
+        <div class="card-footer">
+        </div>
+     
+      </div>
+
+
+<br>
+    </div>
+
+
+  </div>
+</div>

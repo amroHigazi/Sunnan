@@ -1,0 +1,52 @@
+<br>
+<br><br>
+<div class="container">
+    <div class="row">
+      <div class="col col-md-2"></div>
+      <div class="col col-md-8">
+      <div class="align">
+        <div class="grid align__item">
+          <div class="register">
+            <img src="/assets/login.svg">
+            <h3 class="label" style="font-size: 26px;
+            "> ...مرحبا بك  </h3>
+      <h4>الرجاء تسجيل الدخول الى حسابك لبدء في النظام العمل </h4>
+      <br>
+            <form [formGroup]="signinForm" (ngSubmit)="loginUser()"  action="" method="post" class="form" >
+                <h3 class="label">اسم المستخدم</h3>
+              <div class="form__field">
+                <input   type="email" class="form-control" id="floatingInput"  placeholder="اكتب الايميل"  formControlName="email" class="form-control" id="inputEmail4">
+                <span class="text-danger"
+                *ngIf="email && email.invalid && email.touched">
+              هذا الحقل مطلوب
+              </span>
+              </div>
+              <h3 class="label">كلمة المرور </h3>
+              <div class="form__field" >
+                <input required type="password" class="form-control" id="floatingPassword"  placeholder="اكتب كلمة السر"  formControlName="password" id="inputPassword4">
+                <span class="text-danger"
+                *ngIf="email && email.invalid && email.touched">
+              هذا الحقل مطلوب
+              </span>
+              </div>
+              <br>
+              <div class="form-check" style="text-align:right;">
+                <input style="float: right; margin: 10px;width: 20px;
+                height: 20px;
+                flex-shrink: 0;margin-top: 2px; " type="checkbox" value="" id="flexCheckIndeterminate">
+                  <span class="form-check-label label" for="flexCheckIndeterminate">
+                    حفظ كلمة السر
+                  </span>
+              </div>  <br>
+              <div class="form__field">
+                <input type="submit" value=" التسجيل ">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col-md-2"></div>
+  </div>
+</div>
+<router-outlet></router-outlet>

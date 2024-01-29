@@ -1,0 +1,41 @@
+
+
+input {
+  border: 1px solid #dbd6d6;
+  padding: 8px 10px;
+  width: 100%; /* Ensure full width in its container */
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  height: 58px;
+}
+
+img {
+  width: 100px; /* Consider max-width for smaller screens */
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+button{
+  width: 100px; /* Consider max-width for smaller screens */
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+@media (max-width: 768px) {
+  button{
+    width: 45px; /* Consider max-width for smaller screens */
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    font-size: 10px;
+  }
+
+ 
+
+}
+.user-icon {
+  width: 80px; /* Icon size */
+  height: 80px; /* Icon size */
+  border-radius: 50%; /* Circle shape */
+  background-color: rgba(14, 113, 14, 0.708); /* Background color */
+  color: white; /* Text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px; /* Adjust as needed */
+  font-weight: bolder;
+
+}

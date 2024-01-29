@@ -1,0 +1,78 @@
+<div class="modal fade" id="createUserModal" tabindex="-1" aria-labelledby="createUserModalLabel" aria-hidden="true">
+</div>
+<div dir="rtl">
+<button type="button"  (click)="closeModal()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<form [formGroup]="CreateIncidentTypesForm" (ngSubmit)="onSubmit()">
+<div class="container">
+ <div class="row">
+  <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+    <div class="card">
+      <h3 style="text-align: center;">مرحيا بك  </h3>
+      <span style="text-align: center;">لانشاء فيديو جديد يرجى ملئ الخانات التالية </span>
+      <div class="drop_box">
+        <header>
+          <i class="fa fa-upload fa-5x" aria-hidden="true" style="color:rgba(210, 220, 210, 0.708);"></i>
+        </header>
+      <p  style="color:rgba(53, 178, 53, 0.708);font-weight: bold;">   </p>
+      <!-- <input type="file" (change)="onFileSelect($event)" accept="video/*" /> -->
+      <input type="file" id="fileInput" hidden (change)="onFileSelect($event)"accept="video/*">
+      <span style="text-align: center;">{{fileName}}</span>
+      <label for="fileInput" class="file-upload-button"> اختر الفيديو انجليزي </label>
+      </div>
+    </div>
+  </div>
+<div class="col col-md-4"></div>
+ </div>
+ <br>
+</div>
+<div class="container">
+  <div class="row" dir="rtl">
+    <div class="col col-md-1"></div>
+    <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+      <div class="form-style-6">
+       <input hidden type="text" name="SectionId" placeholder=" أكتب اسم التصنيف" [value]="SectionId"  formControlName="SectionId"  />
+       <label>الاسم باللغة الانجليزية  </label>
+       <p></p>
+        <input  type="text" name="Name" placeholder=" أكتب اسم الفيديو الانجليزية" formControlName="Name"  />
+        </div>
+    </div>
+<div class="col col-md-2"></div>
+   </div>
+</div>
+<div class="container">
+  <div class="row">
+
+   <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+     <div class="card">
+       <div class="drop_box">
+        <header>
+          <i class="fa fa-upload fa-5x" aria-hidden="true" style="color:rgba(210, 220, 210, 0.708);"></i>
+        </header>
+       <p  style="color:rgba(53, 178, 53, 0.708);font-weight: bold;">   </p>
+       <!-- <input type="file" (change)="onFileSelect($event)" accept="video/*" /> -->
+       <input type="file" id="fileInput1" hidden (change)="onFileSelectAr($event)"accept="video/*">
+       <span style="text-align: center;">{{fileNameAr}}</span>
+       <label for="fileInput1" class="file-upload-button">اختر الفيديو عربي </label>
+       </div>
+     </div>
+   </div>
+<div class="col col-md-4"></div>
+  </div>
+ </div>
+ <div class="container">
+  <div class="row" dir="rtl">
+    <div class="col col-md-1"></div>
+    <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+      <div class="form-style-6">
+        <label>الاسم باللغة العربية  </label>
+        <p></p>
+        <input type="text" name="ArabicName" placeholder=" أكتب اسم الفيديو عربي" formControlName="ArabicName"  />
+        <!-- Rest of your app content -->
+        <input type="submit" value="رفع الفيديو" />
+        </div>
+    </div>
+<div class="col col-md-2"></div>
+   </div>
+</div>
+</form>

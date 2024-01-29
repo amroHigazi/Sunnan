@@ -1,0 +1,56 @@
+<br>
+<br>
+<div dir="rtl" class="inline-block-container">
+
+  <div  class="item">
+    <a routerLink="" class="item" (click)="goBack()"> <h2> قائمة الفيديوهات  </h2></a>
+   </div>
+  <div class="item"> <h2 (click)="getBack()">/</h2>
+  </div>
+ 
+  <a  routerLinkActive="active-link" routerLinkActiveOptions="{exact: true}" class="item" >
+    <h2 class=" active-link" (click)="goBack()">  فيديوهات </h2>
+  </a>
+
+  
+
+
+<form [formGroup]="updateHadithForm" (ngSubmit)="onSubmit()">
+
+<div class="container">
+  <div class="row" dir="rtl">
+    <div class="col col-md-1"></div>
+
+    <div class="col-md-9">
+      <div class="form-style-6">
+    
+     
+          <label>الاسم باللغة الانجليزية  </label>
+       <p></p>
+       
+        <input type="text" name="name" placeholder=" أكتب اسم الفديو الانجليزية" formControlName="name" id="name " />
+        
+        <br>
+        <label>الاسم باللغة العربية   </label>
+        <p></p>
+        
+         <input type="text" name="nameArabic" placeholder=" أكتب اسم الفديو بالعربية" formControlName="nameArabic" id="nameArabic " />
+         
+         <br>
+         <label> الوصف </label>
+         <p></p>
+         
+          <input type="text" name="description" placeholder=" أكتب وصف الفديو " formControlName="description" id="description " />
+          
+          <br>
+        <input type="submit" value="رفع الفيديو" />
+
+        </div>
+     
+
+    </div>
+<div class="col col-md-2"></div>
+   </div>
+</div>
+
+</form>

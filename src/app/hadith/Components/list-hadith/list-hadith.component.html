@@ -1,0 +1,159 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+  integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<br>
+<br>
+<br>
+<div dir="rtl" class="inline-block-container">
+  <div  class="item">
+   <a routerLink="/category/list-category" class="item"> <h2> لوحة التحكم </h2></a>
+  </div>
+  <div class="item">
+    <h2>/</h2>
+  </div>
+
+  
+  <div  class="item">
+    <a routerLink="" class="item" (click)="goBack()"> <h2>  {{ name }} </h2></a>
+   </div>
+
+  <div class="item">
+    <h2>/</h2>
+  </div>
+  <a cl routerLinkActive="active-link" routerLinkActiveOptions="{exact: true}" class="item" class="item active-link">
+    <h2 (click)="goBack()"> قائمة فيديوهات </h2>
+  </a>
+</div>
+<div class="container" dir="rtl">
+
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> </h5>
+          <button dir="r\" (click)="closeVideo()" type="button" style="background-color: red;" class="btn-close"
+            data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+          <iframe width="100%" height="315" [src]="safeVideoUrl" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2"> </h5>
+          <button dir="r\" (click)="closeVideo()" type="button" style="background-color: red;" class="btn-close"
+            data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+          <iframe width="100%" height="315" [src]="safeVideoUrl" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="container" dir="rtl">
+  <div class="row">
+    <div class="col col-md-3">
+
+
+    </div>
+    <div class="col col-md-7">
+      <h2> </h2>
+
+    </div>
+    <div class="col col-md-2">
+      <!-- Button trigger modal -->
+      <button class="btn" (click)="openModal()" mat-mini-fab>اضافة فيديو </button>
+
+
+
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <!-- <app-create-hadith [id]="id"></app-create-hadith> -->
+      <table class="table">
+        <thead>
+          <tr class="table-light" style=" text-align: center;">
+            <th style="text-align: right;">اسم الفيديو</th>
+            <th>تاريخ الاضافة</th>
+            <th>تعديل</th>
+            <th style="color: red;">حذف</th>
+            <th>-</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr style=" text-align: center;
+                " *ngFor="let hadith of hadith2">
+
+            <td style="text-align: right;">{{hadith.nameArabic
+              }}</td>
+            <td>{{hadith.creationDate |date}}</td>
+            <td>
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                  <a routerLink="/hadith/edit-hadith/{{hadith.id}}" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Edit" class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                  <a data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" class="px-2 text-danger"
+                    (click)="deleteHadith(hadith.id)"><i class="bx bx-trash-alt font-size-18"></i></a>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                  <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    (click)="openVideo(hadith.url )">تشغيل  الفيديو انجيليزي </button>
+                    
+                </li>
+                <li class="list-inline-item"> | </li>
+
+                <li class="list-inline-item">
+                  <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    (click)="openVideo(hadith.urlAr )">تشغيل  الفيديو عربي </button>
+                    
+                </li>
+              </ul>
+            </td>
+            <!-- and so on... -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
